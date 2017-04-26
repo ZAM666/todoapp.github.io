@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const finishedTasks = document.getElementById('finishedTasks');
 	const finishedWarning = document.getElementById('finishedWarning');
 
-	var createNewTask = function(createTask) {
+	var createNewTask = function() {
 		var newItem = document.createElement('li');
 		var itemInput = document.createElement('input');
 		var deleteButton = document.createElement('button');
@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	}
 
+	addButton.addEventListener('click', createNewTask);
+
 	var addTask = function() {
 		var newItem = createElement(itemInput.value);
 		todoTasks.appendChild(newItem);
 		itemInput.value = '';
 	}
-
-	addButton.addEventListener('click', createNewTask);
 
 	var deleteTask = function() {
 		var newItem = this.parentNode;
@@ -66,13 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var newItem = this;
 		var list = newItem.parentNode.firstChild;
 
-		if (list === document.activeElement) {
-			return false;
-			// list.disabled = true;
-		} else {
-			return true;
-			// list.disabled = false;
-		}
+		list.disabled = false;
 		
 	}
 
