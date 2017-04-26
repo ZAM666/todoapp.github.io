@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo App by Dawid Zamkowski</title>
+  <script src="https://use.fontawesome.com/ef52789804.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Todo app</i></h2>
+		<div class="box">
+			<h3>Add task</h3>
+			<p>Add your task here</p>
+			<div class="add-task-box">
+				<input id="add-task" type="text">
+				<button class="check" id="addButton"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+			</div>
+		</div>
+
+		<div class="box">
+			<h3>Todo</h3>
+			<ul class="todo-tasks" id="todoTasks">
+				<p id="todoWarning">Add some tasks to list!</p>
+			</ul>
+		</div>
+		
+		<div class="box">
+			<h3>Finished tasks</h3>
+			<ul class="finished-tasks" id="finishedTasks">
+				<p id="finishedWarning">You have not finished any tasks yet!</p>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>
